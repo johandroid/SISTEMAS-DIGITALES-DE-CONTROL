@@ -15,3 +15,5 @@ sistema2=minreal(sistema)
 
 %% Ejercicio 1.2
 
+[b a]=tfdata(sistema2,'v')
+fvtool(b,a)
