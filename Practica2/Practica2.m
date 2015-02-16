@@ -30,8 +30,17 @@ end
 % Compara las funciones de transferencia de GD(z), GD(z)·H(z) y Y(z)/X(z).
 ltiview({'step';'bode'},fdt(1),fdt(2),fdt(3))
 
-%% Ejercicio 2.4 Filtro 
+%% Ejercicio 2.4 
 n=2;
 Wn=4/12;
 [b,a]=butter(n,Wn)
 % dfilt.df2(b,a)  --> Esto hace la direct form 2 directamente
+% Con el fdatool sale esto:
+% Num =  0.1551    0.3101    0.1551
+% Den = 1.0000   -0.6202    0.2404
+fvtool(b,a)
+
+% Aun falta sacar la implementacion
+
+%% Ejercicio 2.5 
+% Toca sacar la ecuación en diferencias que se metería en un DSP
